@@ -28,16 +28,16 @@ const perfilController = () => {
 
 const UIController = () => {
   const DOMstrings = {
-    inputEmail: '',
-    inputSenha: '',
-    inputCnpj: '',
-    inputAtuacao: '',
-    inputEmpDesc:'',
-    inputValEmprest: '',
-    inputRazaoSoc: '',
-    inputValFinan: '',
-    inputPrazo: '',
-    inputPeriCar: ''
+    inputEmail: '.Email',
+    inputSenha: '.Senha',
+    inputCnpj: '.CNPJ',
+    inputAtuacao: '.Area',
+    inputEmpDesc: '.descricao',
+    inputValEmprest: '.valemprestimo',
+    inputRazaoSoc: '.razaosocial',
+    inputValFinan: '.valorfinanciamento',
+    inputPrazo: '.prazo',
+    inputPeriCar: '.periodocarencia'
   };
 
   const formatNumber = function(num) {
@@ -62,4 +62,40 @@ const UIController = () => {
 
   getDOMstrings = () => return DOMstrings;
 
-}
+};
+
+var controller = (function(budgetCtrl, UICtrl){
+
+  var setupEventListeners = function() {
+    var DOM = UICtrl.getDOMstrings();
+
+    document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem);
+
+    document.addEventListener('keypress', function(event){
+
+      if(event.keyCode === 13 || event.which === 13) {
+        ctrlAddItem();
+      }
+    });
+    
+    document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+
+    document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
+
+  };
+
+return {
+  init: function(){
+    console.log('O program foi iniciado.');
+    UICtrl.displayDate();
+    UICtrl.displayBudget({
+        budget: 0,
+        totalInc: 0,
+        totalExp: 0,
+        percentage: -1
+    });
+    setupEventListeners();
+  }
+};
+
+})(budgetController, UIController);
