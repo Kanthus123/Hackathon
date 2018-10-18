@@ -53,13 +53,29 @@
       <div class="card-body">
         <h3 class="mt-5 mb-5">Dados da Empresa</h3>
         <div class="md-form">
-          <input type="text" id="CPF" class="form-control">
-          <label for="CPF">CPF/CNPJ:</label>
+          <input type="text" id="CNPJ" class="form-control">
+          <label for="CNPJ">CNPJ</label>
         </div>
         <div class="md-form">
-          <input type="text" id="Area" class="form-control">
-          <label for="Area">Área de atuação</label>
-        </div>
+              <label for="Area">Area de atuação</label><br></br>
+              <select id="Area" class="form-control">
+                <option value="selecionar" disabled selected>Selecionar</option>
+                <option value="infraestrutura">Infraestrutura</option>
+                <option value="industria">Indústria, Comércio e Serviços</option>
+                <option value="agropecuaria">Agropecuária</option>
+                <option value="administracao">Administração Pública</option>
+                <option value="capital">Capital de Giro</option>
+                <option value="cidades">Cidades</option>
+                <option value="cooperativa">Cooperativa de Crédito</option>
+                <option value="credito">Crédito Rural</option>
+                <option value="cultura">Cultura e Economia Criativa</option>
+                <option value="educacao">Educação, Saúde e Investimentos Sociais</option>
+                <option value="empreendimentos">Empreendimentos, Reforma e Ampliação</option>
+                <option value="maquinas">Máquinas, Equipamentos e Veículos</option>
+                <option value="meio">Meio Ambiente</option>
+                <option value="solucoes">Soluções de IoT</option>
+              </select>
+            </div>
         <div class="md-form">
           <input type="text" id="descricao" class="form-control">
           <label for="descricao">Descrição da empresa</label>
