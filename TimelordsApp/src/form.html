@@ -30,15 +30,28 @@
   </nav>
     <!--Main layout-->
     <div class="container">
-          <h1 class="mt-5 mb-5">Preencha o formulário</h1>
+      <h2>Preencha os dados</h2>
+      <div class="card mt-5">
+    <div class="card-body mb-5">
+        <form>
+          <h3 class="mt-5 mb-5">Dados Pessoais</h3>
             <div class="md-form">
-                <input type="text" id="Email" class="form-control">
+                <input type="email" id="Email" class="form-control">
                 <label for="Email" >Email</label>
             </div>
             <div class="md-form">
-                <input type="text" id="Senha" class="form-control">
+                <input type="password" id="Senha" class="form-control">
                 <label for="Senha" >Senha</label>
             </div>
+            <input class="btn btn-primary" value="Prosseguir"/>
+          </div>
+          </div>
+
+
+            <div class="card mt-5">
+
+          <div class="card-body">
+            <h3 class="mt-5 mb-5">Dados da Empresa</h3>
             <div class="md-form">
               <input type="text" id="CPF" class="form-control">
               <label for="CPF" >CPF/CNPJ:</label>
@@ -51,7 +64,15 @@
               <input type="text" id="descricao" class="form-control">
               <label for="descricao" >Descrição da empresa</label>
             </div>
+          <input class="btn btn-primary" value="Prosseguir"/>
+          </div>
 
+          </div>
+
+                        <div class="card mt-5">
+
+                      <div class="card-body">
+                        <h3 class="mt-5 mb-5">Dados do Empréstimo</h3>
 
             <div class="md-form">
           <input type="text" id="valemprestimo" class="form-control">
@@ -61,10 +82,7 @@
           <input type="text" id="razaosocial" class="form-control">
           <label for="razaosocial" >Razão Social</label>
           </div>
-          <div class="md-form">
-          <input type="text" id="valor" class="form-control">
-          <label for="valor" >Valor</label>
-          </div>
+
           <div class="md-form">
           <input type="text" id="valorfinanciamento" class="form-control">
           <label for="valorfinanciamento" >Valor do Financiamento</label>
@@ -79,8 +97,10 @@
           <input type="text" id="periodocarencia" class="form-control">
           <label for="periodocarencia" >Periodo de carencia</label>
           </div>
+          <input class="btn btn-primary" value="Concluir Cadastro" type="submit"/>
+        </div>
+        </form>
 
-              <input class="btn btn-primary" type="submit" value="Prosseguir">
 
     </div>
 
