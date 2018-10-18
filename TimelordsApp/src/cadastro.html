@@ -43,7 +43,7 @@
             <label for="Senha" class="text-white">Senha</label>
           </div>
           <div class="ml-1 mr-3">
-        <button class="btn btn-white next btn-lg" >Prosseguir</button>
+        <button class="btn btn-white next btn-lg" onclick="escondeMostra(1)">Prosseguir</button>
       </div>
       </div>
     </div>
@@ -85,10 +85,8 @@
           <input type="text" id="descricao" class="form-control input text-white">
           <label for="descricao" class="text-white">Descrição da empresa</label>
         </div>
-        <button class="btn btn-white next btn-lg" >Prosseguir</button>
+        <button class="btn btn-white next btn-lg" onclick="escondeMostra(2)">Prosseguir</button>
       </div>
-
-
 
 
       <!--Etapa 3 layout-->
@@ -124,7 +122,7 @@
             <input type="text" id="periodocarencia" class="form-control input" required>
             <label for="periodocarencia" class="text-white">Periodo de carência</label>
           </div>
-          <input class="btn btn-white next btn-success btn-lg" value="Finalizar" type="submit" required />
+          <button class="btn btn-white next btn-success btn-lg" value="Finalizar" type="submit" onclick="escondeMostra(3)"></button>
         </div>
         </form>
 
@@ -132,9 +130,21 @@
 </div>
 
     <!-- SCRIPTS -->
+    <script>
+    function escondeMostra(a)
+      {
+    if(a == 1){
+    document.getElementById("primeira_etapa").style.display="none";
+    }
+    else if(a == 2){
+    document.getElementById("segunda_etapa").style.display="none";
+  } else {
+    document.getElementById("primeira_etapa").style.display="block";
+    document.getElementById("segunda_etapa").style.display="block";
+  }
+      }
+    </script>
     <!-- Latest compiled and minified JavaScript -->
-
-
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -148,7 +158,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
 
-    <script src="./src/script.js">
+    <script>
       wow = new WOW().init(); // Inicialização de animações do MD bootstrap
     </script>
 

@@ -53,7 +53,7 @@ const UIController = () => {
       cnpj: document.querySelector(DOMstrings.inputCnpj).value,
       areaAtuacao: document.querySelector(DOMstrings.inputAtuacao).value,
       descEmpresa: document.querySelector(DOMstrings.inputEmpDesc).value,
-      valEmprestimo: formatNumber(parseFloat(document.querySelector(DOMstrings.inputRazaoSoc).value)),
+      valEmprestimo: parseFloat(document.querySelector(DOMstrings.inputRazaoSoc).value),
       razaoSocial: document.querySelector(DOMstrings.inputValFinan).value,
       prazo: parseInt(document.querySelector(DOMstrings.inputPrazo).value),
       peridCarencia: parseInt(document.querySelector(DOMstrings.inputPeriCar).value)
