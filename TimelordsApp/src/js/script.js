@@ -37,7 +37,8 @@ const UIController = () => {
     inputRazaoSoc: '.razaosocial',
     inputValFinan: '.valorfinanciamento',
     inputPrazo: '.prazo',
-    inputPeriCar: '.periodocarencia'
+    inputPeriCar: '.periodocarencia',
+    inputButton: '.btn finalizar'
   };
 
   const formatNumber = function(num) {
@@ -64,21 +65,21 @@ const UIController = () => {
 
 };
 
-const controller = (function(budgetCtrl, UICtrl){
+const controller = (function(perfilCtrl, UICtrl){
+
+  const input = UICtrl.getInput();
 
   const setupEventListeners = function() {
-    var DOM = UICtrl.getDOMstrings();
+    const DOM = UICtrl.getDOMstrings();
 
-    document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem);
+    document.querySelector(DOM.inputButton).addEventListener('click', addUsuario);
 
     document.addEventListener('keypress', function(event){
 
       if(event.keyCode === 13 || event.which === 13) {
-        ctrlAddItem();
+        addItem();
       }
     });
-
-    document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
 
     document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
 
@@ -87,15 +88,9 @@ const controller = (function(budgetCtrl, UICtrl){
 return {
   init: function(){
     console.log('O program foi iniciado.');
-    UICtrl.displayDate();
-    UICtrl.displayBudget({
-        budget: 0,
-        totalInc: 0,
-        totalExp: 0,
-        percentage: -1
     });
     setupEventListeners();
   }
 };
 
-})(budgetController, UIController);
+})(perfilController, UIController);
