@@ -64,9 +64,9 @@ const UIController = () => {
 
 };
 
-var controller = (function(budgetCtrl, UICtrl){
+const controller = (function(budgetCtrl, UICtrl){
 
-  var setupEventListeners = function() {
+  const setupEventListeners = function() {
     var DOM = UICtrl.getDOMstrings();
 
     document.querySelector(DOM.inputButton).addEventListener('click', ctrlAddItem);
@@ -77,7 +77,7 @@ var controller = (function(budgetCtrl, UICtrl){
         ctrlAddItem();
       }
     });
-    
+
     document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
 
     document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
