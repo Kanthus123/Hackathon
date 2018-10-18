@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico">
-
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 
 
 </head>
@@ -43,9 +44,7 @@
             <input type="password" id="Senha" class="form-control">
             <label for="Senha">Senha</label>
           </div>
-          <div>
-            <button type="button" class="btn btn-success">Prosseguir</button>
-          </div>
+        <button class="btn btn-success"  >Prosseguir</button>
       </div>
     </div>
 
@@ -60,7 +59,7 @@
         </div>
         <div class="md-form">
               <label for="Area">Area de atuação</label><br></br>
-              <select id="Area" class="form-control">
+              <select id="Area" class="selectpicker form-control" data-live-search="true" data-style="btn-success" data-width="fit">
                 <option value="selecionar" disabled selected>Selecionar</option>
                 <option value="infraestrutura">Infraestrutura</option>
                 <option value="industria">Indústria, Comércio e Serviços</option>
@@ -82,10 +81,9 @@
           <input type="text" id="descricao" class="form-control">
           <label for="descricao">Descrição da empresa</label>
         </div>
-        <div>
-          <button type="button" class="btn btn-success">Prosseguir</button>
-        </div>
+        <button class="btn btn-success"  >Prosseguir</button>
       </div>
+    </div>
 
       <!--Etapa 3 layout-->
       <div class="card mt-5">
@@ -116,9 +114,7 @@
             <input type="text" id="periodocarencia" class="form-control" required>
             <label for="periodocarencia">Periodo de carência</label>
           </div>
-          <div>
-            <button type="button" class="btn btn-success">Concluir Cadastro</button>
-          </div>
+          <input class="btn btn-success" value="Concluir Cadastro" type="submit" required />
         </div>
         </form>
       </div>
@@ -127,17 +123,27 @@
 </div>
   <br>
     <!-- SCRIPTS -->
+    <!-- Latest compiled and minified JavaScript -->
+
+
+
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
 
-    <script src="./src/script.js">
-      wow = new WOW().init();
+    <script>
+      wow = new WOW().init(); // Inicialização de animações do MD bootstrap
     </script>
+
+
   </body>
 </html>

@@ -19,11 +19,7 @@ const perfilController = () => {
 
       novoUsuario = new Usuario(email, senha, cnpj, areaAtuacao, descEmpresa, valEmprestimo, razaoSocial, prazo, peridCarencia);
 
-      }
-
-      const Lulidu = new Usuario('Lulidu', 475767, 06772824/0002-68, 'Indústria, Comércio e Serviços',
-      'Empresa que de venda de bolos e doces caseiros', 50000, 'O dinheiro será usado para compra de novos eletro domesticos que agilizem a produção dos bolos e doces',
-      24, 6);
+}
 
 
 const UIController = () => {
@@ -44,7 +40,7 @@ const UIController = () => {
     return{
       email: document.querySelector(DOMstrings.inputEmail).value.
       senha: document.querySelector(DOMstrings.inputSenha).value,
-      cnpj: document.querySelector(DOMstrings.inputCnpj).value,
+      cnpj: parseInt(document.querySelector(DOMstrings.inputCnpj).value),
       areaAtuacao: document.querySelector(DOMstrings.inputAtuacao).value,
       descEmpresa: document.querySelector(DOMstrings.inputEmpDesc).value,
       valEmprestimo: parseFloat(document.querySelector(DOMstrings.inputRazaoSoc).value),
