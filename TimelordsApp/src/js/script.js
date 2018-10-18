@@ -40,12 +40,6 @@ const UIController = () => {
     inputPeriCar: ''
   };
 
-  const formatNumber = function(num) {
-    num = Math.abs(num).toFixed(2);
-    num = num.replace(/\B(?=(\d{3})+(?!\d))/g, ","); //Isso é uma Regular Expression
-    return num;
-};
-
   getInput = () => {
     return{
       email: document.querySelector(DOMstrings.inputEmail).value.
@@ -59,6 +53,8 @@ const UIController = () => {
       peridCarencia: parseInt(document.querySelector(DOMstrings.inputPeriCar).value)
     };
   },
+
+
 
   getDOMstrings = () => return DOMstrings;
 
