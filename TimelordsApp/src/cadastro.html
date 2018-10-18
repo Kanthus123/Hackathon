@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico">
+
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark success-color">
+    <a class="navbar-brand" href="#">BNDES</a>
+  </nav>
+  <!--Main layout-->
+  <div class="container">
+
+  <!--Etapa 1 layout-->
+    <h2 class="mt-5">Preencha os dados</h2>
+    <div class="card mt-5">
+      <div class="card-body mb-5">
+        <form>
+          <h3 class="mt-5 mb-5">Dados Pessoais</h3>
+          <div class="md-form">
+            <input type="email" id="Email" class="form-control">
+            <label for="Email">Email</label>
+          </div>
+          <div class="md-form">
+            <input type="password" id="Senha" class="form-control">
+            <label for="Senha">Senha</label>
+          </div>
+          <input class="btn btn-success" value="Prosseguir" />
+      </div>
+    </div>
+
+  <!--Etapa 2 layout-->
+    <div class="card mt-5">
+
+      <div class="card-body">
+        <h3 class="mt-5 mb-5">Dados da Empresa</h3>
+        <div class="md-form">
+          <input type="text" id="CNPJ" class="form-control">
+          <label for="CNPJ">CNPJ</label>
+        </div>
+        <div class="md-form">
+              <label for="Area">Area de atuação</label><br></br>
+              <select id="Area" class="form-control">
+                <option value="selecionar" disabled selected>Selecionar</option>
+                <option value="infraestrutura">Infraestrutura</option>
+                <option value="industria">Indústria, Comércio e Serviços</option>
+                <option value="agropecuaria">Agropecuária</option>
+                <option value="administracao">Administração Pública</option>
+                <option value="capital">Capital de Giro</option>
+                <option value="cidades">Cidades</option>
+                <option value="cooperativa">Cooperativa de Crédito</option>
+                <option value="credito">Crédito Rural</option>
+                <option value="cultura">Cultura e Economia Criativa</option>
+                <option value="educacao">Educação, Saúde e Investimentos Sociais</option>
+                <option value="empreendimentos">Empreendimentos, Reforma e Ampliação</option>
+                <option value="maquinas">Máquinas, Equipamentos e Veículos</option>
+                <option value="meio">Meio Ambiente</option>
+                <option value="solucoes">Soluções de IoT</option>
+              </select>
+            </div>
+        <div class="md-form">
+          <input type="text" id="descricao" class="form-control">
+          <label for="descricao">Descrição da empresa</label>
+        </div>
+        <input class="btn btn-success" value="Prosseguir" />
+      </div>
+
+      <!--Etapa 3 layout-->
+      <div class="card mt-5">
+
+        <div class="card-body">
+          <h3 class="mt-5 mb-5">Dados do Empréstimo</h3>
+
+          <div class="md-form">
+            <input type="text" id="valemprestimo" class="form-control" required>
+            <label for="valemprestimo">Valor do empréstimo</label>
+          </div>
+          <div class="md-form">
+            <input type="text" id="razaosocial" class="form-control" required>
+            <label for="razaosocial">Razão Social</label>
+          </div>
+
+          <div class="md-form">
+            <input type="text" id="valorfinanciamento" class="form-control" required>
+            <label for="valorfinanciamento">Valor do Financiamento</label>
+          </div>
+
+          <div class="md-form">
+            <input type="text" id="prazo" class="form-control" required>
+            <label for="prazo">Prazo</label>
+          </div>
+
+          <div class="md-form">
+            <input type="text" id="periodocarencia" class="form-control" required>
+            <label for="periodocarencia">Periodo de carência</label>
+          </div>
+          <input class="btn btn-success" value="Concluir Cadastro" type="submit" required />
+        </div>
+        </form>
+      </div>
+
+    </div>
+</div>
+  <br>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+    <script src="./src/script.js">
+      wow = new WOW().init();
+    </script>
+  </body>
+</html>
